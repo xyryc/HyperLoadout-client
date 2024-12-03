@@ -3,12 +3,13 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { AuthContext } from "../providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const LoginPage = () => {
   const { userLogin, setUser, signInWithGoogle, setLoading } =
     useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
-  const [email, setEmail] = useState("");
+  //   const [email, setEmail] = useState("");
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -25,12 +26,18 @@ const LoginPage = () => {
     userLogin(email, password)
       .then((result) => {
         setUser(result.user);
+        console.log(result.user);
+
         navigate(location?.state ? location.state : "/");
         // toast.success(`Logged in as ${result.user?.email}`);
       })
       .catch((err) => {
-        // console.log(err.message);
-        // toast.error(err.message);
+        console.log(err.message);
+        Swal.fire({
+          title: "Error",
+          text: `${err.code}`,
+          icon: "error",
+        });
         setLoading(false);
       });
   };
@@ -38,13 +45,18 @@ const LoginPage = () => {
   const handleGoogleSignIn = () => {
     signInWithGoogle()
       .then((result) => {
-        // console.log(result.user);
+        console.log(result.user);
         setUser(result.user);
         // toast.success(`Logged in as ${result.user?.email}`);
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
-        // console.log(error);
+        console.log(error);
+        Swal.fire({
+          title: "Error",
+          text: `${error.code}`,
+          icon: "error",
+        });
         // toast.error(error.code);
         setLoading(false);
       });
@@ -52,7 +64,6 @@ const LoginPage = () => {
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
-    // console.log("show pass", showPassword);
   };
 
   //   const handleForgetPassword = () => {
@@ -62,7 +73,7 @@ const LoginPage = () => {
   return (
     <div className="flex justify-center items-center">
       <div className="card bg-base-100 w-full max-w-md shrink-0 rounded-md p-10 border">
-        <h2 className="font-semibold text-2xl text-center">
+        <h2 className="font-semibold text-2xl text-center font-bebas-neue">
           Login your account
         </h2>
         <div className="border-b-[1px] mt-8"></div>
@@ -84,7 +95,7 @@ const LoginPage = () => {
               name="email"
               placeholder="Enter your email address"
               className="input input-bordered"
-              onChange={(e) => setEmail(e.target.value)}
+              //   onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
