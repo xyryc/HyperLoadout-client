@@ -8,6 +8,7 @@ import AddEquipmentPage from "../pages/AddEquipmentPage";
 import MyEquipmentPage from "../pages/MyEquipmentPage";
 import UpdateEquipmentPage from "../pages/UpdateEquipmentPage";
 import ViewDetailsPage from "../pages/ViewDetailsPage";
+import PrivateRoutes from "./PrivateRoutes";
 
 const router = createBrowserRouter([
   {
@@ -34,19 +35,35 @@ const router = createBrowserRouter([
       // Private Routes
       {
         path: "/add-equipment",
-        element: <AddEquipmentPage />,
+        element: (
+          <PrivateRoutes>
+            <AddEquipmentPage />
+          </PrivateRoutes>
+        ),
       },
       {
         path: "/my-equipment",
-        element: <MyEquipmentPage />,
+        element: (
+          <PrivateRoutes>
+            <MyEquipmentPage />
+          </PrivateRoutes>
+        ),
       },
       {
         path: "/update-equipment/:id",
-        element: <UpdateEquipmentPage />,
+        element: (
+          <PrivateRoutes>
+            <UpdateEquipmentPage />
+          </PrivateRoutes>
+        ),
       },
       {
         path: "/equipment/:id",
-        element: <ViewDetailsPage />,
+        element: (
+          <PrivateRoutes>
+            <ViewDetailsPage />
+          </PrivateRoutes>
+        ),
       },
     ],
   },
