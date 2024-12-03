@@ -1,6 +1,14 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../providers/AuthProvider";
 
 const Header = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut();
+  };
+
   const links = (
     <>
       <li>
@@ -84,12 +92,36 @@ const Header = () => {
         </div>
 
         <div className="navbar-end">
-          <Link to="/register" className="btn hover:text-red-600">
-            Register
-          </Link>
-          <Link to="/login" className="btn hover:text-red-600">
-            Login
-          </Link>
+          {user ? (
+            <div className="flex justify-center items-center gap-2">
+              <div
+                tabIndex={0}
+                role="button"
+                className="btn btn-ghost btn-circle avatar"
+              >
+                <div className="w-10 rounded-full">
+                  <img
+                    title={user?.displayName}
+                    alt={user?.displayName}
+                    src={user?.photoURL}
+                  />
+                </div>
+              </div>
+
+              <Link onClick={handleLogOut} className="btn">
+                Logout
+              </Link>
+            </div>
+          ) : (
+            <>
+              <Link to="/register" className="btn hover:text-red-600">
+                Register
+              </Link>
+              <Link to="/login" className="btn hover:text-red-600">
+                Login
+              </Link>
+            </>
+          )}
         </div>
       </div>
     </div>

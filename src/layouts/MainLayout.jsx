@@ -7,7 +7,7 @@ const MainLayout = () => {
     <div>
       <Header />
 
-      <div className="min-h-[calc(100vh-292px)] py-4">
+      <div className="min-h-[calc(100vh-292px)] py-4 font-roboto">
         <Outlet />
       </div>
 
