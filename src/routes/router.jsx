@@ -1,10 +1,54 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
+import HomeLayout from "../layouts/HomeLayout";
+import LoginPage from "../pages/LoginPage";
+import RegisterPage from "../pages/RegisterPage";
+import AllEquipmentPage from "../pages/AllEquipmentPage";
+import AddEquipmentPage from "../pages/AddEquipmentPage";
+import MyEquipmentPage from "../pages/MyEquipmentPage";
+import UpdateEquipmentPage from "../pages/UpdateEquipmentPage";
+import ViewDetailsPage from "../pages/ViewDetailsPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
+    children: [
+      {
+        path: "/",
+        element: <HomeLayout />,
+      },
+      {
+        path: "/login",
+        element: <LoginPage />,
+      },
+      {
+        path: "/register",
+        element: <RegisterPage />,
+      },
+      {
+        path: "/all-equipments",
+        element: <AllEquipmentPage />,
+      },
+
+      // Private Routes
+      {
+        path: "/add-equipment",
+        element: <AddEquipmentPage />,
+      },
+      {
+        path: "/my-equipment",
+        element: <MyEquipmentPage />,
+      },
+      {
+        path: "/update-equipment/:id",
+        element: <UpdateEquipmentPage />,
+      },
+      {
+        path: "/equipment/:id",
+        element: <ViewDetailsPage />,
+      },
+    ],
   },
 ]);
 

@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   const links = (
@@ -15,15 +15,36 @@ const Header = () => {
       </li>
 
       <li>
-        <a>All Equipments</a>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "text-red-600 font-bold underline" : ""
+          }
+          to="/all-equipments"
+        >
+          All Equipments
+        </NavLink>
       </li>
 
       <li>
-        <a>Add Equipment</a>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "text-red-600 font-bold underline" : ""
+          }
+          to="/add-equipment"
+        >
+          Add Equipment
+        </NavLink>
       </li>
 
       <li>
-        <a>My Equipment List</a>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "text-red-600 font-bold underline" : ""
+          }
+          to="/my-equipment"
+        >
+          My Equipments
+        </NavLink>
       </li>
     </>
   );
@@ -61,8 +82,14 @@ const Header = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
+
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <Link to="/register" className="btn hover:text-red-600">
+            Register
+          </Link>
+          <Link to="/login" className="btn hover:text-red-600">
+            Login
+          </Link>
         </div>
       </div>
     </div>
