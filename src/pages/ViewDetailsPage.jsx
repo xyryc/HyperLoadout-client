@@ -2,7 +2,7 @@ import { useLoaderData } from "react-router-dom";
 
 const ViewDetailsPage = () => {
   const loadedData = useLoaderData();
-  console.log(loadedData);
+  // console.log(loadedData);
 
   return (
     <div className="max-w-md mx-auto p-6 border shadow-lg rounded-lg bg-white">

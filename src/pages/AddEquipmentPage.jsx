@@ -66,7 +66,7 @@ const AddEquipmentPage = () => {
 
   return (
     <div className="text-center container mx-auto px-4">
-      <h1 className="my-10 text-3xl font-bold font-bebas-neue">
+      <h1 className=" text-3xl font-bold font-bebas-neue">
         Add Equipment
       </h1>
 
