@@ -18,41 +18,41 @@ You are tasked with developing a **Sports Equipment Online Store**. The goal is 
 * **Unique Design:** Create a unique Design but remember, your website idea shouldn't be similar to any projects you've done before or to any examples in our modules or conceptual sessions.  
 * You can also look for free resources on [blogs](https://bootcamp.uxdesign.cc/free-images-and-resources-collection-for-website-c77f2fc46ce5) to help with your website.  
 * **Host your Application:**  You can choose deployment systems like Netlify, Surge, and Firebase for client-side hosting and vercel for server-side hosting. As you develop a single-page application.    
-  * Ensure the page doesn't throw any error when reloading from any routes.    
+  * Ensure the page doesn't throw any error when reloading from any routes. ✅   
   * Add your domain for authorization to Firebase if you use Netlify / surge  
-  * Logged in User must not  redirect to Login on reloading any private route 
+  * Logged in User must not  redirect to Login on reloading any private route ✅
 
 ### **Main Requirements:**
 
 1. #### **Navbar:**
 
    The navbar will contain:  
-* Website name/logo  
+* Website name/logo  ✅
 * Home  
 * All Sports Equipment  
 * Add Equipment (Private Route)  
 * My Equipment List (Private Route)  
-* "Login" and "Register"  
-  The "Login" and "Register" buttons are conditional:  
-* If the user is not logged in, show "Login" and "Register".  
-* If the user is logged in, show their photoURL, displayName on hover, and a "Log Out" button. 
+* "Login" and "Register"  ✅
+  The "Login" and "Register" buttons are conditional:  ✅
+* If the user is not logged in, show "Login" and "Register".  ✅
+* If the user is logged in, show their photoURL, displayName on hover, and a "Log Out" button. ✅
 
 2. #### **Footer:**
 
-* Create a meaningful footer with **website name**, **copyright**, **contact info**, and **social media links**.
+* Create a meaningful footer with **website name**, **copyright**, **contact info**, and **social media links**. ✅
 
 
 3. #### **Login Page:**
 
-* **Email**, **Password,** and one additional authentication method (Google/GitHub/Facebook/Twitter).   
-* After submitting incorrect credentials, show an error using a toast/sweet alert.
+* **Email**, **Password,** and one additional authentication method (Google/GitHub/Facebook/Twitter).   ✅
+* After submitting incorrect credentials, show an error using a toast/sweet alert. ✅
 
 
 4. #### **Register Page:**
 
-* Fields: **Name**, **Email**, **PhotoURL**, **Password**.  
-* Password validation: Must contain uppercase, and lowercase letters, and be at least 6 characters long.  
-* Upon successful registration or login, a success message will appear.
+* Fields: **Name**, **Email**, **PhotoURL**, **Password**.  ✅
+* Password validation: Must contain uppercase, and lowercase letters, and be at least 6 characters long. ✅ 
+* Upon successful registration or login, a success message will appear. ✅
 
  **🎯Don’t implement email verification or forget password method as it will inconvenience the examiner. If you want, you can add these after receiving the assignment result.**
 

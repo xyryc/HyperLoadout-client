@@ -27,6 +27,18 @@ const RegisterPage = () => {
     const password = form.get("password");
     // console.log({ name, photo, email, password });
 
+    // password validation
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+    if (!passwordRegex.test(password)) {
+      Swal.fire({
+        title: "Error!",
+        text: "Password must contain at least one uppercase letter, one lowercase letter and be at least 6 characters long.",
+        icon: "error"
+      });
+
+      return;
+    }
+
     createNewUser(email, password)
       .then((result) => {
         const user = result.user;
