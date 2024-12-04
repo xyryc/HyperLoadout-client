@@ -65,6 +65,8 @@ const router = createBrowserRouter([
             <ViewDetailsPage />
           </PrivateRoutes>
         ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/equipment/${params.id}`),
       },
     ],
   },

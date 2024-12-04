@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const AllEquipmentPage = () => {
   const loadedData = useLoaderData();
@@ -29,7 +29,11 @@ const AllEquipmentPage = () => {
                 <td>{item.category}</td>
                 <td>{item.price}</td>
                 <td>{item.stock}</td>
-                <td className="underline">Details</td>
+                <td>
+                  <Link to={`/equipment/${item._id}`} className="underline">
+                    Details
+                  </Link>
+                </td>
               </tr>
             ))}
           </tbody>
