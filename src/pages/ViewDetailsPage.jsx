@@ -9,7 +9,7 @@ const ViewDetailsPage = () => {
       <img
         src={loadedData.photo}
         alt={loadedData.name}
-        className="w-full h-64 object-cover rounded-md mb-4"
+        className="w-full h-64 object-scale-down rounded-md mb-4"
       />
       <h2 className="text-2xl font-bold mb-2">{loadedData.name}</h2>
       <p className="text-sm text-gray-500 mb-2">

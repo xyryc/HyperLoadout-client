@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const MyEquipmentPage = () => {
   const { user } = useContext(AuthContext);
@@ -12,10 +13,44 @@ const MyEquipmentPage = () => {
       .then((data) => setEquipments(data));
   }, [user?.email]);
 
+  const handleDelete = (id) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/my-equipment/${id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            if (data.deletedCount > 0) {
+              Swal.fire({
+                title: "Deleted!",
+                text: "Item has been deleted.",
+                icon: "success",
+              });
+
+              const remaining = equipments.filter(
+                (equipment) => equipment._id !== id
+              );
+              setEquipments(remaining);
+            }
+          });
+      }
+    });
+  };
+
   return (
     <>
       {equipments.length === 0 ? (
-        <div className="flex flex-col justify-center items-center h-[49vh] space-y-4">
+        <div className="container mx-auto px-4 flex flex-col justify-center items-center h-[49vh] space-y-4">
           <p className="text-center text-3xl font-bold">
             You do not have added any equipments.
           </p>
@@ -24,7 +59,7 @@ const MyEquipmentPage = () => {
           </Link>
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center justify-items-center gap-6">
+        <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center justify-items-center gap-6">
           {equipments.map((equipment) => (
             <div
               key={equipment._id}
@@ -33,7 +68,7 @@ const MyEquipmentPage = () => {
               <img
                 src={equipment.photo}
                 alt={equipment.name}
-                className="w-full h-48 object-cover rounded-md mb-4"
+                className="w-full h-48 object-scale-down rounded-md mb-4"
               />
               <h2 className="text-lg font-semibold mb-1">{equipment.name}</h2>
               <p className="text-sm text-gray-600 mb-1">
@@ -61,14 +96,14 @@ const MyEquipmentPage = () => {
               </p>
               <div className="flex justify-between mt-4">
                 <button
-                  onClick={() => onUpdate(equipment._id)}
-                  className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                  // onClick={() => onUpdate(equipment._id)}
+                  className="btn btn-info btn-outline"
                 >
                   Update
                 </button>
                 <button
-                  onClick={() => onDelete(equipment._id)}
-                  className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
+                  onClick={() => handleDelete(equipment._id)}
+                  className="btn btn-error btn-outline"
                 >
                   Delete
                 </button>
