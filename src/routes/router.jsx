@@ -30,6 +30,7 @@ const router = createBrowserRouter([
       {
         path: "/all-equipments",
         element: <AllEquipmentPage />,
+        loader: () => fetch("http://localhost:5000/equipments"),
       },
 
       // Private Routes
