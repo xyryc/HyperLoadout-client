@@ -95,12 +95,12 @@ const MyEquipmentPage = () => {
                 {equipment.email})
               </p>
               <div className="flex justify-between mt-4">
-                <button
-                  // onClick={() => onUpdate(equipment._id)}
+                <Link
+                  to={`/update-equipment/${equipment._id}`}
                   className="btn btn-info btn-outline"
                 >
                   Update
-                </button>
+                </Link>
                 <button
                   onClick={() => handleDelete(equipment._id)}
                   className="btn btn-error btn-outline"

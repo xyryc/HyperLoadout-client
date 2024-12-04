@@ -59,6 +59,8 @@ const router = createBrowserRouter([
             <UpdateEquipmentPage />
           </PrivateRoutes>
         ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/update-equipment/${params.id}`),
       },
       {
         path: "/equipment/:id",

@@ -99,20 +99,20 @@ You are tasked with developing a **Sports Equipment Online Store**. The goal is 
 - Display all equipment added by the logged-in user in card format and show the data in the card as you want. ✅
 - Include the **Update** and **Delete** buttons.
 - On Clicking the update button user will be redirected to the update page
-- On Clicking the delete button a confirmation modal will be opened and after confirmation, the data will be deleted.
+- On Clicking the delete button a confirmation modal will be opened and after confirmation, the data will be deleted. ✅
 
 10. #### **Update Page: (Private Route)**
 
-- Create a form with all the required fields you have taken in the Add Equipment Page that the user will use to update the data. **User Email** and **User Name will be read-only**.
+- Create a form with all the required fields you have taken in the Add Equipment Page that the user will use to update the data. **User Email** and **User Name will be read-only**. ✅
 - After submission, show a confirmation message for a successful update.
 
 11. #### **404 Page:**
 
-- Add a 404 page for non-existing routes.
+- Add a 404 page for non-existing routes. ✅
 
 12. #### **Loading Spinner:**
 
-- Show a **loading spinner** while data is being loaded.
+- Show a **loading spinner** while data is being loaded. ✅
 
 ---
 
