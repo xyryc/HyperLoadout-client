@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaSortNumericDownAlt, FaSortNumericUpAlt } from "react-icons/fa";
 import { Link, useLoaderData } from "react-router-dom";
 
 const AllEquipmentPage = () => {
@@ -11,11 +12,26 @@ const AllEquipmentPage = () => {
       .then((data) => setEquipments(data));
   };
 
+  const handleSortAscending = () => {
+    fetch("http://localhost:5000/equipments/sort/ascending")
+      .then((res) => res.json())
+      .then((data) => setEquipments(data));
+  };
+
   return (
     <div>
-      <p className="text-right container mx-auto">
-        <button onClick={handleSortDescending} className="btn btn-outline mb-4">
-          Sort
+      <p className="text-right container mx-auto space-x-2">
+        <button
+          onClick={handleSortDescending}
+          className="btn btn-sm btn-outline mb-4"
+        >
+          Descending <FaSortNumericDownAlt />
+        </button>
+        <button
+          onClick={handleSortAscending}
+          className="btn btn-sm btn-outline mb-4"
+        >
+          Ascending <FaSortNumericUpAlt />
         </button>
       </p>
 
