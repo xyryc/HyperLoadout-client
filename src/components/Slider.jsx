@@ -33,13 +33,13 @@ const Slider = () => {
         {sliderData.map((slider) => (
           <SwiperSlide key={slider.id}>
             <img
-              className="w-full h-[80vh] object-cover relative -z-50"
+              className="w-full h-[80vh] object-cover z-10"
               src={slider.image}
               alt={slider.title}
             />
 
             {/* Dark overlay */}
-            <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div className="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
 
             {/* Content */}
             <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center p-4 shadow-2xl z-10">
