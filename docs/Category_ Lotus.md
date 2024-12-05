@@ -62,7 +62,7 @@ You are tasked with developing a **Sports Equipment Online Store**. The goal is 
 - **Navbar**, ✅
   **Banner/Slider**, ✅
   **Product section**, ✅
-  **Sports Categories section**, and
+  **Sports Categories section**, and ✅
   **Footer**. ✅
 - The banner should have a **slider** with at least 3 slides featuring meaningful content.
 - The product section will display at least **6 product cards** with a "View Details" button. ✅

@@ -1,36 +1,82 @@
-import { useLoaderData } from "react-router-dom";
+import { BiCategory } from "react-icons/bi";
+import { FaStar } from "react-icons/fa";
+import { Link, useLoaderData } from "react-router-dom";
 
 const ViewDetailsPage = () => {
   const loadedData = useLoaderData();
-  // console.log(loadedData);
+  const {
+    _id,
+    category,
+    customization,
+    description,
+    email,
+    name,
+    photo,
+    price,
+    processing_time,
+    rating,
+    stock,
+    username,
+  } = loadedData;
 
   return (
-    <div className="max-w-md mx-auto p-6 border shadow-lg rounded-lg bg-white">
-      <img
-        src={loadedData.photo}
-        alt={loadedData.name}
-        className="w-full h-64 object-scale-down rounded-md mb-4"
-      />
-      <h2 className="text-2xl font-bold mb-2">{loadedData.name}</h2>
-      <p className="text-sm text-gray-500 mb-2">
-        Category: <span className="font-medium">{loadedData.category}</span>
-      </p>
-      <p className="mb-2 text-gray-600">{loadedData.description}</p>
-      <p className="text-gray-800 font-medium mb-2">Price: ${loadedData.price}</p>
-      <p className="text-gray-800 mb-2">
-        Stock Available: <span className="font-medium">{loadedData.stock}</span>
-      </p>
-      <p className="text-gray-800 mb-2">
-        Customization:{" "}
-        <span className="font-medium">{loadedData.customization}</span>
-      </p>
-      <p className="text-gray-800 mb-2">
-        Processing Time:{" "}
-        <span className="font-medium">{loadedData.processing_time} days</span>
-      </p>
-      <p className="text-gray-800">
-        Rating: <span className="font-medium">{loadedData.rating} ⭐</span>
-      </p>
+    <div className="container mx-auto px-4 mb-20">
+      <div className="breadcrumbs text-sm pt-2 pb-6">
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <a>{category}</a>
+          </li>
+          <li>
+            <a>{name}</a>
+          </li>
+        </ul>
+      </div>
+
+      <div className="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-2 justify-items-center place-items-center gap-10">
+        <div className="w-full border h-96 flex justify-center items-center overflow-hidden bg-base-200">
+          <img className="object-scale-down h-full" src={photo} alt="" />
+        </div>
+
+        <div className="w-full flex flex-col h-full">
+          <div>
+            <p className="flex items-center gap-2">
+              <BiCategory /> {category}
+            </p>
+            <h1 className="text-5xl font-bold font-bebas-neue my-2">{name}</h1>
+            <p className="text-3xl">
+              ₽ <span className="font-black">{price}</span>
+            </p>
+            <div className="flex items-center gap-2">
+              <div className="flex items-center">
+                {[...Array(5)].map((_, index) => (
+                  <FaStar
+                    key={index}
+                    size={20}
+                    color={index < rating ? "#2171ad" : "#E5E7EB"}
+                  />
+                ))}
+              </div>
+              <p>{rating}</p>
+            </div>
+
+            <div className="divider"></div>
+          </div>
+
+          <ul className="flex-grow space-y-2 list-disc list-inside text-balance font-light">
+            <li>Description: {description}</li>
+            <li>Stock: {stock}</li>
+            <li>Customization: {customization}</li>
+            <li>Delivery Time: within {processing_time} days</li>
+            <li>Product Id: {_id}</li>
+            <li>
+              Added by: {username} ({email})
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };

@@ -35,7 +35,7 @@ const Products = () => {
             <div className="p-4 bg-base-200 flex flex-col justify-between flex-grow">
               <div>
                 <div className="text-sm font-light">Stock: {product.stock}</div>
-                <h3 className="text-lg mb-3">{product.name}</h3>
+                <h3 className="text-lg font-bold mb-3">{product.name}</h3>
                 <p className="mb-10 text-sm font-light">
                   {product.description}
                 </p>

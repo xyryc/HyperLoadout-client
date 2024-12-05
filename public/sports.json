@@ -13,21 +13,21 @@
   },
   {
     "id": 3,
+    "title": "Zero Hour",
+    "image": "https://www.cloudgamingcatalogue.com/wp-content/uploads/2022/02/Zero-Hour.jpg",
+    "description": "Zero Hour tournaments deliver intense, tactical team-based gameplay set in realistic locations, providing a unique competitive experience."
+  },
+  {
+    "id": 4,
     "title": "Rainbow Six Siege",
     "image": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/788cf621-29e7-4712-bc47-7fb196445147/d9s7ccg-3da00665-4206-402f-9957-6c0f8dc97e2c.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzc4OGNmNjIxLTI5ZTctNDcxMi1iYzQ3LTdmYjE5NjQ0NTE0N1wvZDlzN2NjZy0zZGEwMDY2NS00MjA2LTQwMmYtOTk1Ny02YzBmOGRjOTdlMmMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.LMeVUSAEnU9KqcN_s9wcFyk2Mn66peNpLsIQgYEp8LI",
     "description": "Rainbow Six Siege tournaments bring high-stakes competition, with teams utilizing strategy, specialized operators, and destructible environments to claim victory."
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "FIFA",
     "image": "https://pbs.twimg.com/media/F8t8EfYbgAAdh6q.jpg",
     "description": "FIFA tournaments bring the excitement of real-life football to esports, as players compete with the best clubs, leagues, and players in the game."
-  },
-  {
-    "id": 5,
-    "title": "Zero Hour",
-    "image": "https://www.cloudgamingcatalogue.com/wp-content/uploads/2022/02/Zero-Hour.jpg",
-    "description": "Zero Hour tournaments deliver intense, tactical team-based gameplay set in realistic locations, providing a unique competitive experience."
   },
   {
     "id": 6,

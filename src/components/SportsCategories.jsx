@@ -18,7 +18,10 @@ const SportsCategories = () => {
           <h1 className="font-bebas-neue text-6xl font-bold">
             eSports Tournamets
           </h1>
-          <p>Join the hype train with the hottest products in our arsenal</p>
+          <p>
+            Join the Action-Packed Journey Through Iconic eSports Titles That
+            Define Competitive Gaming
+          </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center place-items-center">
