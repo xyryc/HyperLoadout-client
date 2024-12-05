@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 import ThemeToggle from "./ThemeToggle";
+import { Tooltip } from "react-tooltip";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -106,10 +107,14 @@ const Header = () => {
               >
                 <div className="w-10 rounded-full">
                   <img
-                    title={user?.displayName}
+                    data-tooltip-id="username"
+                    data-tooltip-content={user?.displayName}
                     alt={user?.displayName}
                     src={user?.photoURL}
                   />
+                  <Tooltip id="username" className="z-10" />
+
+
                 </div>
               </div>
 

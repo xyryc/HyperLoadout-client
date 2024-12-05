@@ -122,7 +122,7 @@ You are tasked with developing a **Sports Equipment Online Store**. The goal is 
 
 ### **Challenges Requirements:**
 
-- At the top of the **All Sports Equipment** page, there will be a button where you will implement [sort](https://www.mongodb.com/docs/manual/reference/method/cursor.sort/) functionality based on “price”. You can sort by ascending or descending or, it’s up to you.
+- At the top of the **All Sports Equipment** page, there will be a button where you will implement [sort](https://www.mongodb.com/docs/manual/reference/method/cursor.sort/) functionality based on “price”. You can sort by ascending or descending or, it’s up to you. ✅
 - Implement a **dark/light theme toggle** on the homepage. ✅
 - **Explore these packages and implement at least two:**
 - [**Lottie React**](https://www.npmjs.com/package/lottie-react)
