@@ -61,12 +61,12 @@ You are tasked with developing a **Sports Equipment Online Store**. The goal is 
 
 - **Navbar**, ✅
   **Banner/Slider**, ✅
-  **Product section**, 
+  **Product section**, ✅
   **Sports Categories section**, and
   **Footer**. ✅
 - The banner should have a **slider** with at least 3 slides featuring meaningful content.
-- The product section will display at least **6 product cards** with a "View Details" button.  
-  **For showing 6 data you can use the [limit operator](https://www.mongodb.com/docs/manual/reference/method/cursor.limit/) of MongoDB**
+- The product section will display at least **6 product cards** with a "View Details" button. ✅
+  **For showing 6 data you can use the [limit operator](https://www.mongodb.com/docs/manual/reference/method/cursor.limit/) of MongoDB** ✅
 - Add at least **2 additional meaningful sections**.
 
 6. #### **Add Equipment Page: (Private Route)**
