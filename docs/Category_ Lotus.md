@@ -60,8 +60,8 @@ You are tasked with developing a **Sports Equipment Online Store**. The goal is 
    The homepage will contain:
 
 - **Navbar**, ✅
-  **Banner/Slider**,
-  **Product section**,
+  **Banner/Slider**, ✅
+  **Product section**, 
   **Sports Categories section**, and
   **Footer**. ✅
 - The banner should have a **slider** with at least 3 slides featuring meaningful content.

@@ -59,8 +59,8 @@ const Header = () => {
   );
 
   return (
-    <div className="font-bebas-neue tracking-wider">
-      <div className="navbar bg-base-100">
+    <div className="font-bebas-neue tracking-wider bg-transparent">
+      <div className="navbar">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -86,7 +86,9 @@ const Header = () => {
               {links}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">HyperLoadout</a>
+          <a className="btn btn-ghost text-xl hover:text-red-600">
+            HyperLoadout
+          </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
@@ -111,16 +113,25 @@ const Header = () => {
                 </div>
               </div>
 
-              <Link onClick={handleLogOut} className="btn">
+              <Link
+                onClick={handleLogOut}
+                className="btn btn-ghost bg-transparent outline-none border-none shadow-none"
+              >
                 Logout
               </Link>
             </div>
           ) : (
             <>
-              <Link to="/register" className="btn hover:text-red-600">
+              <Link
+                to="/register"
+                className="btn btn-ghost hover:text-red-600 bg-transparent outline-none border-none shadow-none"
+              >
                 Register
               </Link>
-              <Link to="/login" className="btn hover:text-red-600">
+              <Link
+                to="/login"
+                className="btn btn-ghost hover:text-red-600 bg-transparent outline-none border-none shadow-none"
+              >
                 Login
               </Link>
             </>
