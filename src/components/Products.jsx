@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
-  console.log(products);
+  // console.log(products);
 
   useEffect(() => {
     fetch("http://localhost:5000/products")
@@ -15,7 +15,7 @@ const Products = () => {
 
   return (
     <div className="container mx-auto px-4 py-20">
-      <div className="text-center">
+      <div className="text-center pb-10">
       <h1 className="font-bebas-neue text-6xl font-bold">BEST SELLERS</h1>
       <p>Join the hype train with the hottest products in our arsenal</p>
       </div>
