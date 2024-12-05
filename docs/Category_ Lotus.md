@@ -134,3 +134,11 @@ You are tasked with developing a **Sports Equipment Online Store**. The goal is 
 - Client-side code GitHub repository
 - Server-side code GitHub repository
 - Live website URL
+
+
+### TODO
+- my equipment page card UI
+- form UI redesign
+- banner content update
+- host on imgbb
+- github readme
