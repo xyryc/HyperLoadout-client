@@ -1,6 +1,8 @@
 import { useState } from "react";
+import Reveal from "react-awesome-reveal";
 import { FaSortNumericDownAlt, FaSortNumericUpAlt } from "react-icons/fa";
 import { Link, useLoaderData } from "react-router-dom";
+import { keyframes } from "@emotion/react";
 
 const AllEquipmentPage = () => {
   const loadedData = useLoaderData();
@@ -17,6 +19,18 @@ const AllEquipmentPage = () => {
       .then((res) => res.json())
       .then((data) => setEquipments(data));
   };
+
+  // Define a custom animation (optional)
+  const fadeInUp = keyframes`
+from {
+  opacity: 0;
+  transform: translateY(20px);
+}
+to {
+  opacity: 1;
+  transform: translateY(0);
+}
+`;
 
   return (
     <div>
@@ -35,9 +49,9 @@ const AllEquipmentPage = () => {
         </button>
       </p>
 
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto lg:overflow-hidden">
         <table className="table">
-          {/* head */}
+          {/* Table head */}
           <thead className="bg-gray-800 text-white">
             <tr>
               <th></th>
@@ -51,20 +65,74 @@ const AllEquipmentPage = () => {
             </tr>
           </thead>
           <tbody>
-            {/* row 1 */}
+            {/* Table rows with reveal */}
             {equipments.map((item, index) => (
               <tr key={item._id}>
-                <th></th>
-                <th>{index + 1}</th>
-                <td>{item.name}</td>
-                <td>{item.category}</td>
-                <td>{item.price}</td>
-                <td>{item.stock}</td>
-                <td>{item.username}</td>
+                <td></td>
                 <td>
-                  <Link to={`/equipment/${item._id}`} className="underline">
-                    Details
-                  </Link>
+                  <Reveal
+                    keyframes={fadeInUp}
+                    delay={index * 100}
+                    duration={500}
+                  >
+                    {index + 1}
+                  </Reveal>
+                </td>
+                <td>
+                  <Reveal
+                    keyframes={fadeInUp}
+                    delay={index * 100}
+                    duration={500}
+                  >
+                    {item.name}
+                  </Reveal>
+                </td>
+                <td>
+                  <Reveal
+                    keyframes={fadeInUp}
+                    delay={index * 100}
+                    duration={500}
+                  >
+                    {item.category}
+                  </Reveal>
+                </td>
+                <td>
+                  <Reveal
+                    keyframes={fadeInUp}
+                    delay={index * 100}
+                    duration={500}
+                  >
+                    {item.price}
+                  </Reveal>
+                </td>
+                <td>
+                  <Reveal
+                    keyframes={fadeInUp}
+                    delay={index * 100}
+                    duration={500}
+                  >
+                    {item.stock}
+                  </Reveal>
+                </td>
+                <td>
+                  <Reveal
+                    keyframes={fadeInUp}
+                    delay={index * 100}
+                    duration={500}
+                  >
+                    {item.username || "-"}
+                  </Reveal>
+                </td>
+                <td>
+                  <Reveal
+                    keyframes={fadeInUp}
+                    delay={index * 60}
+                    duration={500}
+                  >
+                    <Link to={`/equipment/${item._id}`} className="underline">
+                      Details
+                    </Link>
+                  </Reveal>
                 </td>
               </tr>
             ))}

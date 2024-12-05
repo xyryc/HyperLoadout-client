@@ -127,7 +127,7 @@ You are tasked with developing a **Sports Equipment Online Store**. The goal is 
 - **Explore these packages and implement at least two:**
 - [**Lottie React**](https://www.npmjs.com/package/lottie-react)
 - [**React Awesome Reveal**](https://www.npmjs.com/package/react-awesome-reveal)
-- [**React Tooltip**](https://www.npmjs.com/package/react-tooltip)
+- [**React Tooltip**](https://www.npmjs.com/package/react-tooltip) ✅
 
 ### **What to Submit:**
 
