@@ -1,6 +1,4 @@
-import { useContext } from "react";
 import { useLoaderData, useNavigate } from "react-router-dom";
-import { AuthContext } from "../providers/AuthProvider";
 import Swal from "sweetalert2";
 
 const UpdateEquipmentPage = () => {

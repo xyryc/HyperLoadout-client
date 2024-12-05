@@ -13,9 +13,9 @@ You are tasked with developing a **Sports Equipment Online Store**. The goal is 
   - Include a minimum of 8 notable GitHub commits on the server side
 - **Readme.md:** Add a meaningful readme.md file with the name of your website and a live site URL. Include a minimum of five bullet points to feature your website.
 - **Responsiveness:** Make it responsive for all devices, including mobile, tablet, and desktop views.
-- **Environment Variables:** The Environment variable hides the Firebase config keys and Mongodb credentials.
-- **Lorem Text:** Don’t use any Lorem ipsum text; you can not use the default alert to show any error or success message.
-- **Unique Design:** Create a unique Design but remember, your website idea shouldn't be similar to any projects you've done before or to any examples in our modules or conceptual sessions.
+- **Environment Variables:** The Environment variable hides the Firebase config keys and Mongodb credentials. ✅
+- **Lorem Text:** Don’t use any Lorem ipsum text; you can not use the default alert to show any error or success message. ✅
+- **Unique Design:** Create a unique Design but remember, your website idea shouldn't be similar to any projects you've done before or to any examples in our modules or conceptual sessions. ✅
 - You can also look for free resources on [blogs](https://bootcamp.uxdesign.cc/free-images-and-resources-collection-for-website-c77f2fc46ce5) to help with your website.
 - **Host your Application:** You can choose deployment systems like Netlify, Surge, and Firebase for client-side hosting and vercel for server-side hosting. As you develop a single-page application.
   - Ensure the page doesn't throw any error when reloading from any routes. ✅
@@ -30,9 +30,9 @@ You are tasked with developing a **Sports Equipment Online Store**. The goal is 
 
 - Website name/logo ✅
 - Home
-- All Sports Equipment
-- Add Equipment (Private Route)
-- My Equipment List (Private Route)
+- All Sports Equipment ✅
+- Add Equipment (Private Route) ✅
+- My Equipment List (Private Route) ✅
 - "Login" and "Register" ✅
   The "Login" and "Register" buttons are conditional: ✅
 - If the user is not logged in, show "Login" and "Register". ✅
@@ -59,7 +59,11 @@ You are tasked with developing a **Sports Equipment Online Store**. The goal is 
 
    The homepage will contain:
 
-- **Navbar**, **Banner/Slider**, **Product section**, **Sports Categories section**, and **Footer**.
+- **Navbar**, ✅
+  **Banner/Slider**,
+  **Product section**,
+  **Sports Categories section**, and
+  **Footer**. ✅
 - The banner should have a **slider** with at least 3 slides featuring meaningful content.
 - The product section will display at least **6 product cards** with a "View Details" button.  
   **For showing 6 data you can use the [limit operator](https://www.mongodb.com/docs/manual/reference/method/cursor.limit/) of MongoDB**
@@ -97,14 +101,14 @@ You are tasked with developing a **Sports Equipment Online Store**. The goal is 
 9. #### **My Equipment List: (Private Route)**
 
 - Display all equipment added by the logged-in user in card format and show the data in the card as you want. ✅
-- Include the **Update** and **Delete** buttons.
-- On Clicking the update button user will be redirected to the update page
+- Include the **Update** and **Delete** buttons. ✅
+- On Clicking the update button user will be redirected to the update page ✅
 - On Clicking the delete button a confirmation modal will be opened and after confirmation, the data will be deleted. ✅
 
 10. #### **Update Page: (Private Route)**
 
 - Create a form with all the required fields you have taken in the Add Equipment Page that the user will use to update the data. **User Email** and **User Name will be read-only**. ✅
-- After submission, show a confirmation message for a successful update.
+- After submission, show a confirmation message for a successful update. ✅
 
 11. #### **404 Page:**
 

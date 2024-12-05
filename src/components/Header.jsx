@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
+import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -92,6 +93,8 @@ const Header = () => {
         </div>
 
         <div className="navbar-end">
+          <ThemeToggle />
+
           {user ? (
             <div className="flex justify-center items-center gap-2">
               <div
