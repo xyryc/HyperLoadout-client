@@ -122,11 +122,11 @@ You are tasked with developing a **Sports Equipment Online Store**. The goal is 
 
 ### **Challenges Requirements:**
 
-- At the top of the **All Sports Equipment** page, there will be a button where 
+- At the top of the **All Sports Equipment** page, there will be a button where
   you will implement [sort](https://www.mongodb.com/docs/manual/reference/method/cursor.sort/)
   functionality based on “price”. You can sort by ascending or descending or, it’s up to you. ✅
 - Implement a **dark/light theme toggle** on the homepage. ✅
-- **Explore these packages and implement at least two:**
+- **Explore these packages and implement at least two:** ✅
 - [**Lottie React**](https://www.npmjs.com/package/lottie-react)
 - [**React Awesome Reveal**](https://www.npmjs.com/package/react-awesome-reveal) ✅
 - [**React Tooltip**](https://www.npmjs.com/package/react-tooltip) ✅
@@ -137,11 +137,12 @@ You are tasked with developing a **Sports Equipment Online Store**. The goal is 
 - Server-side code GitHub repository
 - Live website URL
 
-
 ### TODO
+
 - my equipment page card UI
-- form UI redesign
+- add category to tournaments section
+- add form UI redesign ✅
+- update form UI redesign ✅
 - slider content fix
-- banner content update
 - host on imgbb
 - github readme

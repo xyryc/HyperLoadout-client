@@ -26,13 +26,18 @@ const LoginPage = () => {
     userLogin(email, password)
       .then((result) => {
         setUser(result.user);
-        console.log(result.user);
+        // console.log(result.user);
 
         navigate(location?.state ? location.state : "/");
-        // toast.success(`Logged in as ${result.user?.email}`);
+
+        Swal.fire({
+          title: "Success",
+          text: "User logged in successfully",
+          icon: "success",
+        });
       })
       .catch((err) => {
-        console.log(err.message);
+        // console.log(err.message);
         Swal.fire({
           title: "Error",
           text: `${err.code}`,

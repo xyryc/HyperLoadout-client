@@ -73,108 +73,153 @@ const UpdateEquipmentPage = () => {
   };
 
   return (
-    <div className="text-center container mx-auto px-4">
-      <h1 className=" text-3xl font-bold font-bebas-neue">Update Equipment</h1>
-
+    <div className="container mx-auto py-10 px-6 lg:px-20">
+      <h1 className="text-4xl font-bebas-neue text-center mb-6">
+        Update Equipment
+      </h1>
       <form
         onSubmit={handleUpdateEquipment}
-        className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+        className="bg-base-200 shadow-md rounded-lg p-8  grid grid-cols-1 lg:grid-cols-2 gap-6"
       >
-        <input
-          defaultValue={name}
-          type="text"
-          name="name"
-          placeholder="Product Name"
-          className="border-[#e5eaf2] border-b outline-none px-4 py-3 focus:border-[#3B9DF8] transition-colors duration-300"
-        />
+        {/* Input Fields */}
+        <div>
+          <label className="block text-sm font-medium mb-2 ">
+            Product Name
+          </label>
+          <input
+            defaultValue={name}
+            type="text"
+            name="name"
+            placeholder="Enter product name"
+            className="input input-bordered w-full"
+          />
+        </div>
 
-        <input
-          defaultValue={category}
-          type="text"
-          name="category"
-          placeholder="Category"
-          className="border-[#e5eaf2] border-b outline-none px-4 py-3 focus:border-[#3B9DF8] transition-colors duration-300"
-        />
+        <div>
+          <label className="block text-sm font-medium mb-2 ">Category</label>
+          <input
+            defaultValue={category}
+            type="text"
+            name="category"
+            placeholder="Enter category"
+            className="input input-bordered w-full"
+          />
+        </div>
 
-        <input
-          defaultValue={description}
-          type="text"
-          name="description"
-          placeholder="Description"
-          className=" border-[#e5eaf2] border-b outline-none px-4 py-3 focus:border-[#3B9DF8] transition-colors duration-300"
-        />
+        <div className="lg:col-span-2">
+          <label className="block text-sm font-medium mb-2 ">Description</label>
+          <textarea
+            defaultValue={description}
+            name="description"
+            placeholder="Enter description"
+            className="textarea textarea-bordered w-full"
+          ></textarea>
+        </div>
 
-        <input
-          defaultValue={processing_time}
-          type="number"
-          name="processing_time"
-          placeholder="Processing Time (in days)"
-          className="border-[#e5eaf2] border-b outline-none px-4 py-3 focus:border-[#3B9DF8] transition-colors duration-300"
-        />
+        <div>
+          <label className="block text-sm font-medium mb-2 ">
+            Processing Time (in days)
+          </label>
+          <input
+            defaultValue={processing_time}
+            type="number"
+            name="processing_time"
+            placeholder="Processing time"
+            className="input input-bordered w-full"
+          />
+        </div>
 
-        <input
-          defaultValue={customization}
-          type="text"
-          name="customization"
-          placeholder="Customization"
-          className="border-[#e5eaf2] border-b outline-none px-4 py-3 focus:border-[#3B9DF8] transition-colors duration-300"
-        />
+        <div>
+          <label className="block text-sm font-medium mb-2 ">
+            Customization
+          </label>
+          <input
+            defaultValue={customization}
+            type="text"
+            name="customization"
+            placeholder="Customization details"
+            className="input input-bordered w-full"
+          />
+        </div>
 
-        <input
-          defaultValue={rating}
-          type="number"
-          name="rating"
-          placeholder="Rating"
-          className="border-[#e5eaf2] border-b outline-none px-4 py-3 focus:border-[#3B9DF8] transition-colors duration-300"
-        />
+        <div>
+          <label className="block text-sm font-medium mb-2 ">Rating</label>
+          <input
+            defaultValue={rating}
+            type="number"
+            name="rating"
+            placeholder="Enter rating"
+            className="input input-bordered w-full"
+          />
+        </div>
 
-        <input
-          defaultValue={price}
-          type="number"
-          name="price"
-          placeholder="Price"
-          className="border-[#e5eaf2] border-b outline-none px-4 py-3 focus:border-[#3B9DF8] transition-colors duration-300"
-        />
+        <div>
+          <label className="block text-sm font-medium mb-2 ">Price</label>
+          <input
+            defaultValue={price}
+            type="number"
+            name="price"
+            placeholder="Enter price"
+            className="input input-bordered w-full"
+          />
+        </div>
 
-        <input
-          defaultValue={stock}
-          type="number"
-          name="stock"
-          placeholder="Stock Status (Available Quantity)"
-          className="border-[#e5eaf2] border-b outline-none px-4 py-3 focus:border-[#3B9DF8] transition-colors duration-300"
-        />
+        <div>
+          <label className="block text-sm font-medium mb-2 ">
+            Stock Status
+          </label>
+          <input
+            defaultValue={stock}
+            type="number"
+            name="stock"
+            placeholder="Stock quantity"
+            className="input input-bordered w-full"
+          />
+        </div>
 
-        <input
-          defaultValue={photo}
-          type="text"
-          name="photo"
-          placeholder="Photo URL"
-          className="sm:col-span-2 border-[#e5eaf2] border-b outline-none px-4 py-3 focus:border-[#3B9DF8] transition-colors duration-300"
-        />
+        <div className="lg:col-span-2">
+          <label className="block text-sm font-medium mb-2 ">Photo URL</label>
+          <input
+            defaultValue={photo}
+            type="text"
+            name="photo"
+            placeholder="Enter photo URL"
+            className="input input-bordered w-full"
+          />
+        </div>
 
-        <input
-          type="text"
-          name="username"
-          placeholder="User Name"
-          defaultValue={username}
-          className="border-[#e5eaf2] border-b outline-none px-4 py-3 focus:border-[#3B9DF8] transition-colors duration-300"
-          readOnly
-        />
+        {/* Read-Only User Info */}
+        <div>
+          <label className="block text-sm font-medium mb-2 ">User Name</label>
+          <input
+            type="text"
+            name="username"
+            value={username}
+            className="input input-bordered w-full bg-base-300 cursor-not-allowed"
+            readOnly
+          />
+        </div>
 
-        <input
-          type="email"
-          name="email"
-          placeholder="User Email"
-          defaultValue={email}
-          className="border-[#e5eaf2] border-b outline-none px-4 py-3 focus:border-[#3B9DF8] transition-colors duration-300"
-          readOnly
-        />
+        <div>
+          <label className="block text-sm font-medium mb-2 ">User Email</label>
+          <input
+            type="email"
+            name="email"
+            value={email}
+            className="input input-bordered w-full bg-base-300 cursor-not-allowed"
+            readOnly
+          />
+        </div>
 
-        <input
-          className="rounded-md bg-blue-100 sm:col-span-2 border-b-gray-200 border py-2 hover:border-blue-500 duration-200 font-medium hover:bg-blue-100"
-          type="submit"
-          value="Update Item"
-        />
+        {/* Submit Button */}
+        <div className="lg:col-span-2 text-center">
+          <button
+            type="submit"
+            className="btn btn-neutral w-full lg:w-1/2 font-medium"
+          >
+            Update Item
+          </button>
+        </div>
       </form>
     </div>
   );
