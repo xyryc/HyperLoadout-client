@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import { FaSun, FaMoon } from "react-icons/fa";
 
 const ThemeToggle = () => {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+  const [theme, setTheme] = useState(localStorage.getItem("hyperloadout-theme") || "black");
 
   useEffect(() => {
     document.querySelector("html").setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
+    localStorage.setItem("hyperloadout-theme", theme);
   }, [theme]);
 
   const toggleTheme = () => {

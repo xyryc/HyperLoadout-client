@@ -32,7 +32,8 @@ const router = createBrowserRouter([
       {
         path: "/all-equipments",
         element: <AllEquipmentPage />,
-        loader: () => fetch("http://localhost:5000/equipments"),
+        loader: () =>
+          fetch("https://hyper-loadout-server.vercel.app/equipments"),
       },
 
       // Private Routes
@@ -60,7 +61,9 @@ const router = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/update-equipment/${params.id}`),
+          fetch(
+            `https://hyper-loadout-server.vercel.app/update-equipment/${params.id}`
+          ),
       },
       {
         path: "/equipment/:id",
@@ -70,7 +73,9 @@ const router = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/equipment/${params.id}`),
+          fetch(
+            `https://hyper-loadout-server.vercel.app/equipment/${params.id}`
+          ),
       },
     ],
   },

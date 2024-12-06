@@ -9,17 +9,17 @@ You are tasked with developing a **Sports Equipment Online Store**. The goal is 
 **Key Rules:**
 
 - **GitHub Commits:**
-  - Include a minimum of 15 notable GitHub commits on the client side.
-  - Include a minimum of 8 notable GitHub commits on the server side
+  - Include a minimum of 15 notable GitHub commits on the client side. ✅
+  - Include a minimum of 8 notable GitHub commits on the server side ✅
 - **Readme.md:** Add a meaningful readme.md file with the name of your website and a live site URL. Include a minimum of five bullet points to feature your website.
-- **Responsiveness:** Make it responsive for all devices, including mobile, tablet, and desktop views.
+- **Responsiveness:** Make it responsive for all devices, including mobile, tablet, and desktop views. ✅
 - **Environment Variables:** The Environment variable hides the Firebase config keys and Mongodb credentials. ✅
 - **Lorem Text:** Don’t use any Lorem ipsum text; you can not use the default alert to show any error or success message. ✅
 - **Unique Design:** Create a unique Design but remember, your website idea shouldn't be similar to any projects you've done before or to any examples in our modules or conceptual sessions. ✅
 - You can also look for free resources on [blogs](https://bootcamp.uxdesign.cc/free-images-and-resources-collection-for-website-c77f2fc46ce5) to help with your website.
-- **Host your Application:** You can choose deployment systems like Netlify, Surge, and Firebase for client-side hosting and vercel for server-side hosting. As you develop a single-page application.
+- **Host your Application:** You can choose deployment systems like Netlify, Surge, and Firebase for client-side hosting and vercel for server-side hosting. As you develop a single-page application. ✅
   - Ensure the page doesn't throw any error when reloading from any routes. ✅
-  - Add your domain for authorization to Firebase if you use Netlify / surge
+  - Add your domain for authorization to Firebase if you use Netlify / surge ✅
   - Logged in User must not redirect to Login on reloading any private route ✅
 
 ### **Main Requirements:**
@@ -122,11 +122,13 @@ You are tasked with developing a **Sports Equipment Online Store**. The goal is 
 
 ### **Challenges Requirements:**
 
-- At the top of the **All Sports Equipment** page, there will be a button where you will implement [sort](https://www.mongodb.com/docs/manual/reference/method/cursor.sort/) functionality based on “price”. You can sort by ascending or descending or, it’s up to you. ✅
+- At the top of the **All Sports Equipment** page, there will be a button where 
+  you will implement [sort](https://www.mongodb.com/docs/manual/reference/method/cursor.sort/)
+  functionality based on “price”. You can sort by ascending or descending or, it’s up to you. ✅
 - Implement a **dark/light theme toggle** on the homepage. ✅
 - **Explore these packages and implement at least two:**
 - [**Lottie React**](https://www.npmjs.com/package/lottie-react)
-- [**React Awesome Reveal**](https://www.npmjs.com/package/react-awesome-reveal)
+- [**React Awesome Reveal**](https://www.npmjs.com/package/react-awesome-reveal) ✅
 - [**React Tooltip**](https://www.npmjs.com/package/react-tooltip) ✅
 
 ### **What to Submit:**
@@ -139,6 +141,7 @@ You are tasked with developing a **Sports Equipment Online Store**. The goal is 
 ### TODO
 - my equipment page card UI
 - form UI redesign
+- slider content fix
 - banner content update
 - host on imgbb
 - github readme

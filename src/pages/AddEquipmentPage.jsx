@@ -6,7 +6,7 @@ import { AuthContext } from "../providers/AuthProvider";
 const AddEquipmentPage = () => {
   const { user } = useContext(AuthContext);
 
-//   const navigate = useNavigate();
+  //   const navigate = useNavigate();
 
   const handleAddEquipment = (event) => {
     event.preventDefault();
@@ -40,7 +40,7 @@ const AddEquipmentPage = () => {
     // console.log(newEquipment);
 
     // send data to server
-    fetch("http://localhost:5000/equipments", {
+    fetch("https://hyper-loadout-server.vercel.app/equipments", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -66,9 +66,7 @@ const AddEquipmentPage = () => {
 
   return (
     <div className="text-center container mx-auto px-4">
-      <h1 className=" text-3xl font-bold font-bebas-neue">
-        Add Equipment
-      </h1>
+      <h1 className=" text-3xl font-bold font-bebas-neue">Add Equipment</h1>
 
       <form
         onSubmit={handleAddEquipment}

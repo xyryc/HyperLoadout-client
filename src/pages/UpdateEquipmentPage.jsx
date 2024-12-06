@@ -50,7 +50,7 @@ const UpdateEquipmentPage = () => {
       email,
     };
 
-    fetch(`http://localhost:5000/update-equipment/${_id}`, {
+    fetch(`https://hyper-loadout-server.vercel.app/update-equipment/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

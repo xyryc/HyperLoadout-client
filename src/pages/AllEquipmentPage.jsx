@@ -9,13 +9,13 @@ const AllEquipmentPage = () => {
   const [equipments, setEquipments] = useState(loadedData);
 
   const handleSortDescending = () => {
-    fetch("http://localhost:5000/equipments/sort/descending")
+    fetch("https://hyper-loadout-server.vercel.app/equipments/sort/descending")
       .then((res) => res.json())
       .then((data) => setEquipments(data));
   };
 
   const handleSortAscending = () => {
-    fetch("http://localhost:5000/equipments/sort/ascending")
+    fetch("https://hyper-loadout-server.vercel.app/equipments/sort/ascending")
       .then((res) => res.json())
       .then((data) => setEquipments(data));
   };

@@ -8,7 +8,7 @@ const MyEquipmentPage = () => {
   const [equipments, setEquipments] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/my-equipment/${user?.email}`)
+    fetch(`https://hyper-loadout-server.vercel.app/my-equipment/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setEquipments(data));
   }, [user?.email]);
@@ -24,7 +24,7 @@ const MyEquipmentPage = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/my-equipment/${id}`, {
+        fetch(`https://hyper-loadout-server.vercel.app/my-equipment/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
