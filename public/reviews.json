@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Alex Hunter",
+    "image": "https://randomuser.me/api/portraits/men/81.jpg",
+    "player_profession": "Professional Valorant Player",
+    "review": "The mouse I purchased from here is top-notch! It improved my accuracy and response time significantly. Highly recommended!"
+  },
+  {
+    "id": 2,
+    "name": "Samantha Carter",
+    "image": "https://randomuser.me/api/portraits/women/85.jpg",
+    "player_profession": "Apex Legends Streamer",
+    "review": "Amazing headphones! The sound quality and noise cancellation are perfect for intense gaming sessions."
+  },
+  {
+    "id": 3,
+    "name": "Chris Jackson",
+    "image": "https://randomuser.me/api/portraits/men/67.jpg",
+    "player_profession": "CS:GO Esports Coach",
+    "review": "The mechanical keyboard I got here is built like a tank. The switches are smooth, and it's perfect for competitive play."
+  },
+  {
+    "id": 4,
+    "name": "Emma Collins",
+    "image": "https://randomuser.me/api/portraits/women/62.jpg",
+    "player_profession": "FIFA Player",
+    "review": "Got a custom controller, and it feels fantastic! My game has never been this smooth. Excellent service."
+  },
+  {
+    "id": 5,
+    "name": "Jake Morrison",
+    "image": "https://randomuser.me/api/portraits/men/59.jpg",
+    "player_profession": "Streamer & Rainbow Six Siege Player",
+    "review": "The gaming chair is super comfortable and has great back support. A lifesaver during long streams!"
+  },
+  {
+    "id": 6,
+    "name": "Liam Sanders",
+    "image": "https://randomuser.me/api/portraits/men/34.jpg",
+    "player_profession": "Zero Hour Pro",
+    "review": "Bought a high-DPI mousepad here, and it has made a noticeable difference in my precision. Love it!"
+  },
+  {
+    "id": 7,
+    "name": "Sophia Bell",
+    "image": "https://randomuser.me/api/portraits/women/47.jpg",
+    "player_profession": "Valorant Analyst",
+    "review": "This store's monitors are a dream come true. Crystal clear visuals with a high refresh rate. I'm thrilled with my purchase."
+  },
+  {
+    "id": 8,
+    "name": "Nathan Ford",
+    "image": "https://randomuser.me/api/portraits/men/22.jpg",
+    "player_profession": "Esports Tournament Organizer",
+    "review": "Bought a bunch of gear for an event, and the quality was excellent. The delivery was also right on time. Great experience!"
+  },
+  {
+    "id": 9,
+    "name": "Isabella Green",
+    "image": "https://randomuser.me/api/portraits/women/29.jpg",
+    "player_profession": "Fortnite Streamer",
+    "review": "The RGB lighting on the keyboard is gorgeous, and it feels amazing to type and game on. Totally worth it!"
+  },
+  {
+    "id": 10,
+    "name": "Daniel Brown",
+    "image": "https://randomuser.me/api/portraits/men/44.jpg",
+    "player_profession": "CS:GO Professional",
+    "review": "Great service and awesome products! My new headset has excellent soundstage, which is crucial for competitive play."
+  }
+]

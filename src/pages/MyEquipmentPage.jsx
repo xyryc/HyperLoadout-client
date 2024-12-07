@@ -8,13 +8,13 @@ import { Fade } from "react-awesome-reveal";
 const MyEquipmentPage = () => {
   const { user } = useContext(AuthContext);
   const [equipments, setEquipments] = useState([]);
+  console.log(equipments);
 
   useEffect(() => {
     fetch(`https://hyper-loadout-server.vercel.app/my-equipment/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
-        
-        setEquipments(data)
+        setEquipments(data);
       });
   }, [user?.email]);
 
@@ -64,109 +64,80 @@ const MyEquipmentPage = () => {
           </Link>
         </div>
       ) : (
-        <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 my-4">
-          <Fade cascade damping={0.1}>
-            {equipments.map((equipment) => (
-              <div
-                key={equipment._id}
-                className="w-full bg-base-100 flex flex-col border"
-              >
-                <img
-                  data-tooltip-id="equipment"
-                  data-tooltip-content={equipment.name}
-                  className="w-[298px] h-[298px] object-scale-down mx-auto"
-                  src={equipment.photo}
-                  alt={equipment.name}
-                />
-                <Tooltip id="equipment" />
+        <div>
+          <div>
+            <h1 className="text-4xl font-bebas-neue text-center mb-6">
+              My Equipments
+            </h1>
+          </div>
 
-                <div className="p-4 bg-base-200 flex flex-col justify-between flex-grow">
-                  <div>
-                    <div className="text-sm font-light">
-                      Stock: {equipment.stock}
+          <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 my-4">
+            <Fade cascade damping={0.1}>
+              {equipments.map((equipment) => (
+                <div
+                  key={equipment._id}
+                  className="w-full bg-base-100 flex flex-col border"
+                >
+                  <img
+                    data-tooltip-id="equipment"
+                    data-tooltip-content={equipment.name}
+                    className="w-[298px] h-[298px] object-scale-down mx-auto"
+                    src={equipment.photo}
+                    alt={equipment.name}
+                  />
+                  <Tooltip id="equipment" />
+
+                  <div className="p-4 bg-base-200">
+                    <div>
+                      <div className="text-sm font-light">
+                        Stock: {equipment.stock}
+                      </div>
+                      <h3 className="text-lg font-bold text-pretty">
+                        {equipment.name}
+                      </h3>
+                      <p className="text-sm font-light text-pretty h-10">
+                        {equipment.description}
+                      </p>
+                      <div className="divider"></div>
+                      <div className="font-light text-sm">
+                        <p>Customization: {equipment.customization}</p>
+                        <p>Category: {equipment.category}</p>
+                        <p>Rating: {equipment.rating}/5</p>
+                        <p>Delivery: within {equipment.processing_time} days</p>
+                        <p>
+                          Added by: {equipment.username} ({equipment.email})
+                        </p>
+                      </div>
                     </div>
-                    <h3 className="text-lg font-bold mb-3">{equipment.name}</h3>
-                    <p className="mb-10 text-sm font-light">
-                      {equipment.description}
-                    </p>
-                  </div>
 
-                  <span className="text-green-600">
-                    ₽ <span className="font-extrabold">{equipment.price}</span>
-                  </span>
+                    <div className="divider"></div>
 
-                  <div className="flex items-center space-x-4">
-                    <Link
-                      to={`/update-equipment/${equipment._id}`}
-                      className="btn btn-info btn-outline"
-                    >
-                      Update
-                    </Link>
-                    <button
-                      onClick={() => handleDelete(equipment._id)}
-                      className="btn btn-error btn-outline"
-                    >
-                      Delete
-                    </button>
+                    <div className="flex items-center justify-between">
+                      <p className="text-green-600">
+                        ₽ <span className="font-bold">{equipment.price}</span>
+                      </p>
+
+                      <div className="flex items-center space-x-4">
+                        <Link
+                          to={`/update-equipment/${equipment._id}`}
+                          className="btn btn-xs btn-outline"
+                        >
+                          Update
+                        </Link>
+                        <button
+                          onClick={() => handleDelete(equipment._id)}
+                          className="btn btn-xs btn-outline"
+                        >
+                          Delete
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </Fade>
+              ))}
+            </Fade>
+          </div>
         </div>
-
-        // <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center justify-items-center gap-6">
-        //   {equipments.map((equipment) => (
-        //     <div
-        //       key={equipment._id}
-        //       className="max-w-sm mx-auto p-4 border shadow-md rounded-lg bg-white"
-        //     >
-        //       <img
-        //         src={equipment.photo}
-        //         alt={equipment.name}
-        //         className="w-full h-48 object-scale-down rounded-md mb-4"
-        //       />
-        //       <h2 className="text-lg font-semibold mb-1">{equipment.name}</h2>
-        //       <p className="text-sm text-gray-600 mb-1">
-        //         <strong>Category:</strong> {equipment.category}
-        //       </p>
-        //       <p className="text-sm text-gray-600 mb-1">
-        //         <strong>Price:</strong> ${equipment.price}
-        //       </p>
-        //       <p className="text-sm text-gray-600 mb-1">
-        //         <strong>Stock:</strong> {equipment.stock} units
-        //       </p>
-        //       <p className="text-sm text-gray-600 mb-1">
-        //         <strong>Rating:</strong> {equipment.rating} ⭐
-        //       </p>
-        //       <p className="text-sm text-gray-600 mb-1">
-        //         <strong>Processing Time:</strong> {equipment.processing_time}{" "}
-        //         days
-        //       </p>
-        //       <p className="text-sm text-gray-600 mb-1">
-        //         <strong>Customization:</strong> {equipment.customization}
-        //       </p>
-        //       <p className="text-sm text-gray-600 mb-1">
-        //         <strong>Added by:</strong> {equipment.username} (
-        //         {equipment.email})
-        //       </p>
-        //       <div className="flex justify-between mt-4">
-        //         <Link
-        //           to={`/update-equipment/${equipment._id}`}
-        //           className="btn btn-info btn-outline"
-        //         >
-        //           Update
-        //         </Link>
-        //         <button
-        //           onClick={() => handleDelete(equipment._id)}
-        //           className="btn btn-error btn-outline"
-        //         >
-        //           Delete
-        //         </button>
-        //       </div>
-        //     </div>
-        //   ))}
-        // </div>
       )}
     </>
   );

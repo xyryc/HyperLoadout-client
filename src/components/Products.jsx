@@ -28,7 +28,7 @@ const Products = () => {
             {products.map((product) => (
               <div
                 key={product._id}
-                className="w-full bg-base-100 flex flex-col"
+                className="w-full bg-base-100 flex flex-col border"
               >
                 <img
                   data-tooltip-id="product"
@@ -45,7 +45,7 @@ const Products = () => {
                       Stock: {product.stock}
                     </div>
                     <h3 className="text-lg font-bold mb-3">{product.name}</h3>
-                    <p className="mb-10 text-sm font-light">
+                    <p className="mb-10 text-sm font-light h-10">
                       {product.description}
                     </p>
                   </div>

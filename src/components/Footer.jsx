@@ -8,7 +8,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-base-200 text-base-content py-10">
+    <footer className="bg-base-200 text-base-content pt-20 pb-4 mt-10">
       <div className="container mx-auto grid grid-cols-1 gap-8 lg:grid-cols-3 px-6 lg:px-20">
         {/* Logo and Motto */}
         <div className="space-y-4">
@@ -87,8 +87,6 @@ const Footer = () => {
       <div className="mt-10 border-t border-base-300 pt-4 text-center text-sm font-roboto text-gray-600 dark:text-gray-400">
         <p>
           &copy; {new Date().getFullYear()} HyperLoadout. All rights reserved.
-          <br />
-          Level up your gear. Level up your game.
         </p>
       </div>
     </footer>

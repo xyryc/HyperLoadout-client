@@ -2,13 +2,13 @@ import Marquee from "react-fast-marquee";
 
 const Sponsors = () => (
   <>
-    <div className="pb-20">
+    <div className="pb-20 pt-40">
       <h1 className="font-bebas-neue text-6xl font-bold text-center my-4">
         Our Partners
       </h1>
       <Marquee>
         <img
-          className="  h-32 px-10"
+          className="h-32 px-10"
           src="https://upload.wikimedia.org/wikipedia/commons/7/79/Logo_Razer_2017.png"
           alt=""
         />

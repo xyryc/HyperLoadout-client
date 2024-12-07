@@ -13,7 +13,7 @@ const SportsCategories = () => {
 
   return (
     <>
-      <div className="container mx-auto px-4 py-10">
+      <div className="container mx-auto px-4 py-20">
         <div className="text-center pb-10">
           <h1 className="font-bebas-neue text-6xl font-bold">
             eSports Tournamets
@@ -40,6 +40,7 @@ const SportsCategories = () => {
                 <h2 className="text-[1.5rem] text-white font-bold text-center leading-[30px] capitalize">
                   {item.title}
                 </h2>
+                <p>{item.category}</p>
                 <p className="text-[1rem] text-white text-center mt-3 opacity-85">
                   {item.description}
                 </p>
