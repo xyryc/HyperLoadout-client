@@ -73,7 +73,7 @@ const UpdateEquipmentPage = () => {
   };
 
   return (
-    <div className="container mx-auto py-10 px-6 lg:px-20">
+    <div className="container mx-auto px-6 lg:px-20">
       <h1 className="text-4xl font-bebas-neue text-center mb-6">
         Update Equipment
       </h1>

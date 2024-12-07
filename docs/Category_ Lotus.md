@@ -139,12 +139,15 @@ You are tasked with developing a **Sports Equipment Online Store**. The goal is 
 
 ### TODO
 
-- my equipment page card UI  ✅
+- my equipment page card UI ✅
 - add category to tournaments section ✅
 - add form UI redesign ✅
 - update form UI redesign ✅
-- add more sponsors 
-- slider content fix 
-- 2 meaningful section 
-- host on imgbb 
-- github readme 
+- add more sponsors ✅
+- slider content fix
+- 2 meaningful section ✅
+- add tooltip to sponsors ✅
+- add fading animation to all pages ✅
+- host on imgbb
+- github readme ✅
+- make sure to build and deploy

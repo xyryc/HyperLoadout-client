@@ -1,30 +1,45 @@
+import { useEffect, useState } from "react";
+import { Fade } from "react-awesome-reveal";
 import Marquee from "react-fast-marquee";
+import { Tooltip } from "react-tooltip";
 
-const Sponsors = () => (
-  <>
-    <div className="pb-20 pt-40">
-      <h1 className="font-bebas-neue text-6xl font-bold text-center my-4">
-        Our Partners
-      </h1>
-      <Marquee>
-        <img
-          className="h-32 px-10"
-          src="https://upload.wikimedia.org/wikipedia/commons/7/79/Logo_Razer_2017.png"
-          alt=""
-        />
-        <img
-          className="  h-32 px-10"
-          src="https://www.pngplay.com/wp-content/uploads/6/Alienware-Gaming-Logo-PNG.png"
-          alt=""
-        />
-        <img
-          className=" h-32 px-10"
-          src="https://www.highsense-gaming.com/wp-content/uploads/2024/04/Zowie-3.png.webp"
-          alt=""
-        />
-      </Marquee>
-    </div>
-  </>
-);
+const Sponsors = () => {
+  const [sponsors, setSponsors] = useState([]);
+
+  useEffect(() => {
+    fetch("sponsors.json")
+      .then((res) => res.json())
+      .then((data) => setSponsors(data));
+  }, []);
+
+  return (
+    <>
+      <Fade cascade damping={0.1}>
+        <div className="pb-20 pt-40 text-center">
+          <div className="pb-10">
+            <h1 className="font-bebas-neue text-6xl font-bold text-center">
+              Our Affiliates
+            </h1>
+            <p>Building success together with industry leaders worldwide</p>
+          </div>
+
+          <Marquee direction="right">
+            {sponsors.map((sponsor) => (
+              <img
+                data-tooltip-id="sponsor"
+                data-tooltip-content={sponsor.name}
+                key={sponsor.id}
+                className="h-32 px-10"
+                src={sponsor.image}
+                alt={sponsor.name}
+              />
+            ))}
+          </Marquee>
+          <Tooltip id="sponsor" />
+        </div>
+      </Fade>
+    </>
+  );
+};
 
 export default Sponsors;

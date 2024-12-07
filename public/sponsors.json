@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "MSI",
+    "image": "https://i.ibb.co.com/VLTqQws/msi.png"
+  },
+  {
+    "id": 2,
+    "name": "Intel",
+    "image": "https://i.ibb.co.com/HdmXqD4/intel.png"
+  },
+  {
+    "id": 3,
+    "name": "AMD",
+    "image": "https://i.ibb.co.com/9Z0Gv07/amd.png"
+  },
+  {
+    "id": 4,
+    "name": "Razer",
+    "image": "https://i.ibb.co.com/pKQpT8h/razer.png"
+  },
+  {
+    "id": 5,
+    "name": "Dell Alienware",
+    "image": "https://i.ibb.co.com/ZzZCJW2/Alienware-Gaming-Logo-PNG.png"
+  },
+  {
+    "id": 6,
+    "name": "Nvidia",
+    "image": "https://i.ibb.co.com/5G5ZbQq/Nvidia.png"
+  },
+  {
+    "id": 7,
+    "name": "Zowie",
+    "image": "https://i.ibb.co.com/syzVQrd/Zowie-3-png.webp"
+  }
+]
