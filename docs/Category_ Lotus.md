@@ -144,10 +144,12 @@ You are tasked with developing a **Sports Equipment Online Store**. The goal is 
 - add form UI redesign ✅
 - update form UI redesign ✅
 - add more sponsors ✅
-- slider content fix
+- github readme ✅
 - 2 meaningful section ✅
 - add tooltip to sponsors ✅
 - add fading animation to all pages ✅
-- host on imgbb
-- github readme ✅
+- host tournaments images ✅
+- host reviewer image ✅
+- slider content fix ✅
+- 1 more section
 - make sure to build and deploy

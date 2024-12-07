@@ -43,10 +43,10 @@ const Slider = () => {
 
             {/* Content */}
             <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center p-4 shadow-2xl z-10">
-              <h2 className="text-4xl lg:text-6xl font-bold mb-2">
+              <h2 className="text-4xl lg:text-6xl font-bold mb-2 drop-shadow-2xl ">
                 {slider.title}
               </h2>
-              <p className="text-lg lg:text-xl lg:w-2/5 mx-auto">
+              <p className="text-lg lg:text-xl lg:w-2/5 mx-auto drop-shadow-2xl text-white/90">
                 {slider.description}
               </p>
               {/* <Link
