@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Fade } from "react-awesome-reveal";
 import { Link } from "react-router-dom";
-import { Tooltip } from "react-tooltip";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -31,13 +30,12 @@ const Products = () => {
                 className="w-full bg-base-100 flex flex-col border"
               >
                 <img
-                  data-tooltip-id="product"
-                  data-tooltip-content={product.name}
+      
                   className="w-[298px] h-[298px] object-scale-down mx-auto"
                   src={product.photo}
                   alt={product.name}
                 />
-                <Tooltip id="product" />
+
 
                 <div className="p-4 bg-base-200 flex flex-col justify-between flex-grow">
                   <div>

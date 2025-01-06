@@ -14,7 +14,9 @@ const MainLayout = () => {
         <Loading />
       ) : (
         <div>
+          <div className="h-[68px]">
           <Header />
+          </div>
 
           <div className="min-h-screen font-roboto">
             <Outlet />
