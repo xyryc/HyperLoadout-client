@@ -35,14 +35,14 @@ const Slider = () => {
             />
 
             {/* Dark overlay */}
-            <div className="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+            <div className="absolute inset-0 bg-black/40 bg-opacity-50 z-10"></div>
 
             {/* Content */}
             <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center p-4 shadow-2xl z-10">
               <h2 className="text-4xl lg:text-6xl font-bold mb-2 drop-shadow-2xl font-bebas-neue tracking-wide">
                 {slider.title}
               </h2>
-              <p className="text-lg lg:text-xl lg:w-2/5 mx-auto text-pretty opacity-70">
+              <p className="text-lg lg:text-xl lg:w-2/5 mx-auto text-pretty opacity-80">
                 {slider.description}
               </p>
               {/* <Link
