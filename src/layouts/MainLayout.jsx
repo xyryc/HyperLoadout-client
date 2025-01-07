@@ -15,10 +15,10 @@ const MainLayout = () => {
       ) : (
         <div>
           <div className="h-[68px]">
-          <Header />
+            <Header />
           </div>
 
-          <div className="min-h-screen font-roboto">
+          <div className="min-h-screen font-roboto ">
             <Outlet />
           </div>
 

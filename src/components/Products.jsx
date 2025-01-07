@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Fade } from "react-awesome-reveal";
 import { Link } from "react-router-dom";
+import ProductCard from "./ProductCard";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -22,47 +23,18 @@ const Products = () => {
           <p>Join the hype train with the hottest products in our arsenal</p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 my-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 my-4">
           <Fade cascade damping={0.1}>
             {products.map((product) => (
-              <div
-                key={product._id}
-                className="w-full bg-base-100 flex flex-col border"
-              >
-                <img
-      
-                  className="w-[298px] h-[298px] object-scale-down mx-auto"
-                  src={product.photo}
-                  alt={product.name}
-                />
-
-
-                <div className="p-4 bg-base-200 flex flex-col justify-between flex-grow">
-                  <div>
-                    <div className="text-sm font-light">
-                      Stock: {product.stock}
-                    </div>
-                    <h3 className="text-lg font-bold mb-3">{product.name}</h3>
-                    <p className="mb-10 text-sm font-light h-10">
-                      {product.description}
-                    </p>
-                  </div>
-
-                  <div className="flex justify-between items-center">
-                    <span className="text-green-600">
-                      ₽ <span className="font-extrabold">{product.price}</span>
-                    </span>
-                    <Link
-                      to={`/equipment/${product._id}`}
-                      className="btn btn-link text-red-600"
-                    >
-                      Details
-                    </Link>
-                  </div>
-                </div>
-              </div>
+            <ProductCard key={product._id} product={product}/>
             ))}
           </Fade>
+        </div>
+
+        <div className="flex justify-center mt-16">
+          <Link to="/all-equipments" className="btn btn-outline rounded">
+            Sell All
+          </Link>
         </div>
       </Fade>
     </div>
