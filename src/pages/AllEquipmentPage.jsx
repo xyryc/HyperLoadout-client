@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
 import { FaHome } from "react-icons/fa";
 import { FiFilter } from "react-icons/fi";
@@ -29,14 +29,16 @@ const AllEquipmentPage = () => {
         <div className="breadcrumbs text-sm">
           <ul>
             <li>
-              <a className="flex items-center gap-2">
+              <Link to="/" className="flex items-center gap-2">
                 <FaHome /> Home
-              </a>
+              </Link>
             </li>
 
-            <li className="flex items-center gap-2">
-              <IoGameController />
-              Equipments
+            <li>
+              <Link to="/all-equipments" className="flex items-center gap-2">
+                <IoGameController />
+                Equipments
+              </Link>
             </li>
           </ul>
         </div>

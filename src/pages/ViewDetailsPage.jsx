@@ -1,5 +1,6 @@
 import { BiCategory } from "react-icons/bi";
-import { FaStar } from "react-icons/fa";
+import { FaHome, FaStar } from "react-icons/fa";
+import { IoGameController } from "react-icons/io5";
 import { Link, useLoaderData } from "react-router-dom";
 
 const ViewDetailsPage = () => {
@@ -24,8 +25,18 @@ const ViewDetailsPage = () => {
       <div className="breadcrumbs text-sm pt-2 pb-6">
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" className="flex items-center gap-2">
+              <FaHome /> Home
+            </Link>
           </li>
+
+          <li>
+            <Link to="/all-equipments" className="flex items-center gap-2">
+              <IoGameController />
+              Equipments
+            </Link>
+          </li>
+
           <li>
             <a>{category}</a>
           </li>
