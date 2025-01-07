@@ -67,11 +67,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/equipment/:id",
-        element: (
-          <PrivateRoutes>
-            <ViewDetailsPage />
-          </PrivateRoutes>
-        ),
+        element: <ViewDetailsPage />,
         loader: ({ params }) =>
           fetch(
             `https://hyper-loadout-server.vercel.app/equipment/${params.id}`
