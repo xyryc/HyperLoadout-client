@@ -67,9 +67,7 @@ const ViewDetailsPage = () => {
             <h1 className="text-5xl font-bold font-bebas-neue my-2 tracking-wider">
               {name}
             </h1>
-            <p className="text-3xl font-black flex items-center">
-              <LuDollarSign />{price}
-            </p>
+            <p className="text-3xl font-black flex items-center">${price}</p>
             <div className="flex items-center gap-2 mt-2">
               <div className="flex items-center">
                 {[...Array(5)].map((_, index) => (
@@ -94,7 +92,7 @@ const ViewDetailsPage = () => {
               <LuCircuitBoard /> Customization: {customization}
             </li>
             <li className="flex items-center gap-2">
-              <LuTruck /> Delivery Time: within {processing_time} days
+              <LuTruck /> Deliver within {processing_time} days
             </li>
             <li className="flex items-center gap-2">
               <LuCircleUserRound /> Seller: {username} ({email})

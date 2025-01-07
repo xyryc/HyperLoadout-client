@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import { useEffect, useState } from "react";
 
 const Slider = () => {
@@ -23,17 +23,13 @@ const Slider = () => {
           delay: 5000,
           disableOnInteraction: false,
         }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
+        modules={[Autoplay]}
         className="mySwiper"
       >
         {sliderData.map((slider) => (
           <SwiperSlide key={slider.id}>
             <img
-              className="w-full h-[100vh] object-cover z-10"
+              className="w-full h-[70vh] object-cover z-10"
               src={slider.image}
               alt={slider.title}
             />
@@ -43,7 +39,7 @@ const Slider = () => {
 
             {/* Content */}
             <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center p-4 shadow-2xl z-10">
-              <h2 className="text-4xl lg:text-6xl font-bold mb-2 drop-shadow-2xl ">
+              <h2 className="text-4xl lg:text-6xl font-bold mb-2 drop-shadow-2xl font-bebas-neue tracking-wide">
                 {slider.title}
               </h2>
               <p className="text-lg lg:text-xl lg:w-2/5 mx-auto drop-shadow-2xl text-white/90">

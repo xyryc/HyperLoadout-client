@@ -5,6 +5,8 @@ import {
   FaEnvelope,
   FaPhone,
 } from "react-icons/fa";
+import { LuGamepad2 } from "react-icons/lu";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -12,8 +14,8 @@ const Footer = () => {
       <div className="container mx-auto grid grid-cols-1 gap-8 lg:grid-cols-3 px-6 lg:px-20">
         {/* Logo and Motto */}
         <div className="space-y-4">
-          <p className="text-4xl font-bebas-neue tracking-widest">
-            HyperLoadout
+          <p className="text-4xl font-bebas-neue tracking-widest flex items-center gap-2">
+           <LuGamepad2/> HyperLoadout
           </p>
           <p className="text-base italic font-roboto text-gray-600 dark:text-gray-400">
             {`"Gear up. Dominate. Repeat."`}
@@ -37,12 +39,12 @@ const Footer = () => {
             Quick Links
           </h3>
           <nav className="mt-4 grid grid-flow-row gap-2 text-sm font-roboto">
-            <a href="#" className="link link-hover">
-              About Us
-            </a>
-            <a href="#" className="link link-hover">
-              Contact
-            </a>
+            <Link to="/" className="link link-hover">
+              Home
+            </Link>
+            <Link to="/all-equipments" className="link link-hover">
+              Equipments
+            </Link>
             <a href="#" className="link link-hover">
               Partnerships
             </a>

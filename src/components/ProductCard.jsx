@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import { LuDollarSign } from "react-icons/lu";
 
 const ProductCard = ({ product }) => {
   return (
@@ -26,7 +25,9 @@ const ProductCard = ({ product }) => {
         </div>
 
         <div className="flex items-center gap-5 mt-3">
-          <span className="font-extrabold text-2xl flex items-center"><LuDollarSign/> {product.price}</span>
+          <span className="font-extrabold text-2xl flex items-center">
+            ${product.price}
+          </span>
 
           <p className="border text-green-600 text-[0.8rem] border-green-400 px-2 py-1 rounded-md">
             {Math.floor(Math.random() * (35 - 5 + 1)) + 5}% Off
@@ -45,6 +46,6 @@ ProductCard.propTypes = {
     photo: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired,
+    price: PropTypes.string.isRequired,
   }).isRequired,
 };

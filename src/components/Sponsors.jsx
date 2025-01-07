@@ -15,7 +15,7 @@ const Sponsors = () => {
   return (
     <>
       <Fade cascade damping={0.1}>
-        <div className="pb-20 pt-40 text-center">
+        <div className="py-20 text-center">
           <div className="pb-10">
             <h1 className="font-bebas-neue text-6xl font-bold text-center">
               Our Affiliates
