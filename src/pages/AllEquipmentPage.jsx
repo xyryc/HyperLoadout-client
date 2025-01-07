@@ -1,9 +1,10 @@
 import { useState } from "react";
-import Reveal from "react-awesome-reveal";
-import { FaSortNumericDownAlt, FaSortNumericUpAlt } from "react-icons/fa";
-import { Link, useLoaderData } from "react-router-dom";
-import { keyframes } from "@emotion/react";
+import { useLoaderData } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
+import { FaHome } from "react-icons/fa";
+import { FiFilter } from "react-icons/fi";
+import { FaSortAmountDown, FaSortAmountUp } from "react-icons/fa";
+import { IoGameController } from "react-icons/io5";
 
 const AllEquipmentPage = () => {
   const loadedData = useLoaderData();
@@ -21,58 +22,49 @@ const AllEquipmentPage = () => {
       .then((data) => setEquipments(data));
   };
 
-  // Define a custom animation (optional)
-  const fadeInUp = keyframes`
-from {
-  opacity: 0;
-  transform: translateY(20px);
-}
-to {
-  opacity: 1;
-  transform: translateY(0);
-}
-`;
-
   return (
     <div className="container mx-auto px-4 overflow-hidden">
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-2 py-10">
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-2 py-6">
         {/* breadcrumbs */}
         <div className="breadcrumbs text-sm">
           <ul>
             <li>
-              <a>Home</a>
+              <a className="flex items-center gap-2">
+                <FaHome /> Home
+              </a>
             </li>
-            <li>
-              <a>Documents</a>
+
+            <li className="flex items-center gap-2">
+              <IoGameController />
+              Equipments
             </li>
-            <li>Add Document</li>
           </ul>
         </div>
 
         {/* dropdown */}
-        <div className="dropdown dropdown-hover dropdown-end mb-4 lg:pr-10">
+        <div className="dropdown dropdown-hover dropdown-end mb-4">
           <div tabIndex={0} role="button" className="btn btn-sm btn-outline">
-            Sort Options
+            <FiFilter /> Sort Options
           </div>
           <ul
             tabIndex={0}
-            className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
+            className="dropdown-content menu bg-base-100 rounded-box z-[1] w-40 p-2 shadow"
           >
-            <li>
-              <button
-                onClick={handleSortDescending}
-                className="btn btn-sm btn-ghost w-full text-left"
-              >
-                Descending{" "}
-                <FaSortNumericDownAlt className="inline-block ml-2" />
-              </button>
-            </li>
             <li>
               <button
                 onClick={handleSortAscending}
                 className="btn btn-sm btn-ghost w-full text-left"
               >
-                Ascending <FaSortNumericUpAlt className="inline-block ml-2" />
+                Ascending <FaSortAmountUp className="inline-block ml-2" />
+              </button>
+            </li>
+
+            <li>
+              <button
+                onClick={handleSortDescending}
+                className="btn btn-sm btn-ghost w-full text-left"
+              >
+                Descending <FaSortAmountDown className="inline-block ml-2" />
               </button>
             </li>
           </ul>
