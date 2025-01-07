@@ -29,7 +29,7 @@ const Slider = () => {
         {sliderData.map((slider) => (
           <SwiperSlide key={slider.id}>
             <img
-              className="w-full h-[70vh] object-cover z-10"
+              className="w-full h-[72vh] object-cover z-10"
               src={slider.image}
               alt={slider.title}
             />
@@ -42,7 +42,7 @@ const Slider = () => {
               <h2 className="text-4xl lg:text-6xl font-bold mb-2 drop-shadow-2xl font-bebas-neue tracking-wide">
                 {slider.title}
               </h2>
-              <p className="text-lg lg:text-xl lg:w-2/5 mx-auto drop-shadow-2xl text-white/90">
+              <p className="text-lg lg:text-xl lg:w-2/5 mx-auto text-pretty opacity-70">
                 {slider.description}
               </p>
               {/* <Link

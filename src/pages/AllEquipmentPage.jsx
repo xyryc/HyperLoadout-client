@@ -5,6 +5,7 @@ import { FaHome } from "react-icons/fa";
 import { FiFilter } from "react-icons/fi";
 import { FaSortAmountDown, FaSortAmountUp } from "react-icons/fa";
 import { IoGameController } from "react-icons/io5";
+import Title from "../components/Title";
 
 const AllEquipmentPage = () => {
   const loadedData = useLoaderData();
@@ -24,7 +25,12 @@ const AllEquipmentPage = () => {
 
   return (
     <div className="container mx-auto px-4 overflow-hidden">
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-2 py-6">
+      <Title
+        heading={"Explore All Equipment"}
+        subHeading={"Discover Top-Tier Gear to Elevate Your Gaming Experience"}
+      />
+
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-2">
         {/* breadcrumbs */}
         <div className="breadcrumbs text-sm">
           <ul>

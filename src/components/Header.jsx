@@ -61,6 +61,17 @@ const Header = () => {
           </li>
         </>
       )}
+
+      <li>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "text-red-600 font-bold underline" : ""
+          }
+          to="/about"
+        >
+          About
+        </NavLink>
+      </li>
     </>
   );
 

@@ -10,6 +10,7 @@ import UpdateEquipmentPage from "../pages/UpdateEquipmentPage";
 import ViewDetailsPage from "../pages/ViewDetailsPage";
 import PrivateRoutes from "./PrivateRoutes";
 import ErrorPage from "../pages/ErrorPage";
+import About from "../pages/About";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
         element: <AllEquipmentPage />,
         loader: () =>
           fetch("https://hyper-loadout-server.vercel.app/equipments"),
+      },
+      {
+        path: "/about",
+        element: <About />,
       },
 
       // Private Routes

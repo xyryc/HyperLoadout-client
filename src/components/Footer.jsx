@@ -15,7 +15,7 @@ const Footer = () => {
         {/* Logo and Motto */}
         <div className="space-y-4">
           <p className="text-4xl font-bebas-neue tracking-widest flex items-center gap-2">
-           <LuGamepad2/> HyperLoadout
+            <LuGamepad2 /> HyperLoadout
           </p>
           <p className="text-base italic font-roboto text-gray-600 dark:text-gray-400">
             {`"Gear up. Dominate. Repeat."`}

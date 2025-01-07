@@ -10,8 +10,8 @@ const HomeLayout = () => {
       <Slider />
       <Sponsors />
       <Products />
-      <SportsCategories/>
-      <Reviews/>
+      <SportsCategories />
+      <Reviews />
     </div>
   );
 };

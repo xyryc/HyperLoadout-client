@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../providers/AuthProvider";
+import Title from "../components/Title";
 
 const AddEquipmentPage = () => {
   const { user } = useContext(AuthContext);
@@ -61,9 +62,11 @@ const AddEquipmentPage = () => {
 
   return (
     <div className="container mx-auto px-6 lg:px-20">
-      <h1 className="text-4xl font-bebas-neue text-center mb-6">
-        Add Equipment
-      </h1>
+      <Title
+        heading={"Add New Equipment"}
+        subHeading={"Expand Your Inventory with Cutting-Edge Gaming Gear"}
+      />
+
       <form
         onSubmit={handleAddEquipment}
         className="bg-base-200 shadow-md rounded-lg p-8  grid grid-cols-1 lg:grid-cols-2 gap-6"
@@ -82,9 +85,7 @@ const AddEquipmentPage = () => {
         </div>
 
         <div>
-          <label className="block text-sm font-medium mb-2 ">
-            Category
-          </label>
+          <label className="block text-sm font-medium mb-2 ">Category</label>
           <input
             type="text"
             name="category"
@@ -94,9 +95,7 @@ const AddEquipmentPage = () => {
         </div>
 
         <div className="lg:col-span-2">
-          <label className="block text-sm font-medium mb-2 ">
-            Description
-          </label>
+          <label className="block text-sm font-medium mb-2 ">Description</label>
           <textarea
             name="description"
             placeholder="Enter description"
@@ -129,9 +128,7 @@ const AddEquipmentPage = () => {
         </div>
 
         <div>
-          <label className="block text-sm font-medium mb-2 ">
-            Rating
-          </label>
+          <label className="block text-sm font-medium mb-2 ">Rating</label>
           <input
             type="number"
             name="rating"
@@ -141,9 +138,7 @@ const AddEquipmentPage = () => {
         </div>
 
         <div>
-          <label className="block text-sm font-medium mb-2 ">
-            Price
-          </label>
+          <label className="block text-sm font-medium mb-2 ">Price</label>
           <input
             type="number"
             name="price"
@@ -165,9 +160,7 @@ const AddEquipmentPage = () => {
         </div>
 
         <div className="lg:col-span-2">
-          <label className="block text-sm font-medium mb-2 ">
-            Photo URL
-          </label>
+          <label className="block text-sm font-medium mb-2 ">Photo URL</label>
           <input
             type="text"
             name="photo"
@@ -178,9 +171,7 @@ const AddEquipmentPage = () => {
 
         {/* Read-Only User Info */}
         <div>
-          <label className="block text-sm font-medium mb-2 ">
-            User Name
-          </label>
+          <label className="block text-sm font-medium mb-2 ">User Name</label>
           <input
             type="text"
             name="username"
@@ -191,9 +182,7 @@ const AddEquipmentPage = () => {
         </div>
 
         <div>
-          <label className="block text-sm font-medium mb-2 ">
-            User Email
-          </label>
+          <label className="block text-sm font-medium mb-2 ">User Email</label>
           <input
             type="email"
             name="email"

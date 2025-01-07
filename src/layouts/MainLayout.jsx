@@ -20,7 +20,7 @@ const MainLayout = () => {
           </div>
 
           <ScrollToTop />
-          <div className="min-h-screen font-roboto ">
+          <div className="min-h-screen font-roboto">
             <Outlet />
           </div>
 

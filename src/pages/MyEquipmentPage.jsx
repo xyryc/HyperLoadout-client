@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { Tooltip } from "react-tooltip";
 import { Fade } from "react-awesome-reveal";
+import Title from "../components/Title";
 
 const MyEquipmentPage = () => {
   const { user } = useContext(AuthContext);
@@ -53,14 +54,20 @@ const MyEquipmentPage = () => {
   };
 
   return (
-    <>
+    <div>
+      <Title
+        heading={"My Equipment"}
+        subHeading={"Manage Your Collection of Gaming Gear with Ease"}
+      />
+
       {equipments.length === 0 ? (
-        <div className="container mx-auto px-4 flex flex-col justify-center items-center h-[49vh] space-y-4">
-          <p className="text-center text-3xl font-bold">
+        <div className="container mx-auto px-4 flex flex-col justify-center items-center h-[60vh] space-y-4">
+          <img src="https://i.ibb.co.com/8gGCfMy/empty.png" alt="empty" className="w-32" />
+          <p className="text-center text-2xl font-bold">
             You do not have added any equipments.
           </p>
           <Link to="/add-equipment" className="btn btn-outline">
-            Go to Add Equipment Page
+            Go to Add Equipment
           </Link>
         </div>
       ) : (
@@ -139,7 +146,7 @@ const MyEquipmentPage = () => {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 
