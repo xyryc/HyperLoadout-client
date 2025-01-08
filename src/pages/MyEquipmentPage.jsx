@@ -5,6 +5,9 @@ import Swal from "sweetalert2";
 import { Tooltip } from "react-tooltip";
 import { Fade } from "react-awesome-reveal";
 import Title from "../components/Title";
+import { LuChartNoAxesCombined, LuCircuitBoard, LuTruck } from "react-icons/lu";
+import { FaStar, FaUser } from "react-icons/fa";
+import { BiCategory } from "react-icons/bi";
 
 const MyEquipmentPage = () => {
   const { user } = useContext(AuthContext);
@@ -62,7 +65,11 @@ const MyEquipmentPage = () => {
 
       {equipments.length === 0 ? (
         <div className="container mx-auto px-4 flex flex-col justify-center items-center h-[60vh] space-y-4">
-          <img src="https://i.ibb.co.com/8gGCfMy/empty.png" alt="empty" className="w-32" />
+          <img
+            src="https://i.ibb.co.com/8gGCfMy/empty.png"
+            alt="empty"
+            className="w-32"
+          />
           <p className="text-center text-2xl font-bold">
             You do not have added any equipments.
           </p>
@@ -72,23 +79,17 @@ const MyEquipmentPage = () => {
         </div>
       ) : (
         <div>
-          <div>
-            <h1 className="text-4xl font-bebas-neue text-center mb-6">
-              My Equipments
-            </h1>
-          </div>
-
-          <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 my-4">
+          <div className="container mx-auto px-4 grid gap-10 my-4">
             <Fade cascade damping={0.1}>
               {equipments.map((equipment) => (
                 <div
                   key={equipment._id}
-                  className="w-full bg-base-100 flex flex-col border"
+                  className="w-full bg-base-100 border grid grid-rows-none sm:grid-cols-2"
                 >
                   <img
                     data-tooltip-id="equipment"
                     data-tooltip-content={equipment.name}
-                    className="w-[298px] h-[298px] object-scale-down mx-auto"
+                    className="w-[298px] h-[298px] object-scale-down m-auto p-4"
                     src={equipment.photo}
                     alt={equipment.name}
                   />
@@ -96,22 +97,35 @@ const MyEquipmentPage = () => {
 
                   <div className="p-4 bg-base-200">
                     <div>
-                      <div className="text-sm font-light">
-                        Stock: {equipment.stock}
+                      <div className="text-sm font-light flex items-center gap-2">
+                        <LuChartNoAxesCombined /> Stock: {equipment.stock}
                       </div>
-                      <h3 className="text-lg font-bold text-pretty">
+                      <h3 className="text-2xl font-bold text-pretty">
                         {equipment.name}
                       </h3>
-                      <p className="text-sm font-light text-pretty h-10">
+                      <p className="text-sm font-light text-pretty">
                         {equipment.description}
                       </p>
+
                       <div className="divider"></div>
+
                       <div className="font-light text-sm">
-                        <p>Customization: {equipment.customization}</p>
-                        <p>Category: {equipment.category}</p>
-                        <p>Rating: {equipment.rating}/5</p>
-                        <p>Delivery: within {equipment.processing_time} days</p>
-                        <p>
+                        <p className="flex items-center gap-2">
+                          <LuCircuitBoard /> Customization:{" "}
+                          {equipment.customization}
+                        </p>
+                        <p className="flex items-center gap-2">
+                          <BiCategory /> Category: {equipment.category}
+                        </p>
+                        <p className="flex items-center gap-2">
+                          <FaStar /> Rating: {equipment.rating}/5
+                        </p>
+                        <p className="flex items-center gap-2">
+                          <LuTruck />
+                          Delivery: within {equipment.processing_time} days
+                        </p>
+                        <p className="flex items-center gap-2">
+                          <FaUser />
                           Added by: {equipment.username} ({equipment.email})
                         </p>
                       </div>
@@ -120,8 +134,8 @@ const MyEquipmentPage = () => {
                     <div className="divider"></div>
 
                     <div className="flex items-center justify-between">
-                      <p className="text-green-600">
-                        ₽ <span className="font-bold">{equipment.price}</span>
+                      <p className="text-green-600 font-bold text-lg">
+                        ${equipment.price}
                       </p>
 
                       <div className="flex items-center space-x-4">

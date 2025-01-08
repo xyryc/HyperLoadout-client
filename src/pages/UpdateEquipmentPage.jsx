@@ -1,5 +1,6 @@
 import { useLoaderData, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import Title from "../components/Title";
 
 const UpdateEquipmentPage = () => {
   const loadedData = useLoaderData();
@@ -74,9 +75,11 @@ const UpdateEquipmentPage = () => {
 
   return (
     <div className="container mx-auto px-6 lg:px-20">
-      <h1 className="text-4xl font-bebas-neue text-center mb-6">
-        Update Equipment
-      </h1>
+      <Title
+        heading={"Update Equipment"}
+        subHeading={"Revise and Keep Your Gear Information Up to Date"}
+      />
+
       <form
         onSubmit={handleUpdateEquipment}
         className="bg-base-200 shadow-md rounded-lg p-8  grid grid-cols-1 lg:grid-cols-2 gap-6"

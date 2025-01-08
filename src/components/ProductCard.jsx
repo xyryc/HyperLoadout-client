@@ -18,8 +18,8 @@ const ProductCard = ({ product }) => {
         <div>
           <h3 className="text-lg font-bold">{product.name}</h3>
           <p className="text-sm font-light opacity-60 text-pretty">
-            {product.description.length > 70
-              ? `${product.description.substring(0, 70)}...`
+            {product.description.length > 40
+              ? `${product.description.substring(0, 40)}...`
               : product.description}
           </p>
         </div>
